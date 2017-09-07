@@ -57,6 +57,6 @@ def average_above_zero(input_list):
 #the input list
 mylist=[1,2,3,4,-7]
 result = average_above_zero(mylist)
-message = 'The average of positiv sample of (list_values) is (res)'.format(list_values=mylist, res=result)
+message = 'The average of positiv sample of {list_values} is {res}'.format(list_values=mylist, res=result)
 print(message)
 
