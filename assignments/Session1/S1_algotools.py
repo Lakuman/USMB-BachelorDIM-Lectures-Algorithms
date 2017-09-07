@@ -55,8 +55,21 @@ def average_above_zero(input_list):
     return float(average)
     
 #the input list
-mylist=[1,2,3,4,-7]
+mylist=[1,2,3,4,-20,3]
 result = average_above_zero(mylist)
 message = 'The average of positiv sample of {list_values} is {res}'.format(list_values=mylist, res=result)
 print(message)
+
+def max_value(input_list):
+
+    maxi_value = input_list[0]
+    for item in input_list:
+        if maxi_value < item:
+            maxi_value=item            
+    return maxi_value
+
+maximum_value = max_value(mylist)
+message = 'The maximum value of the list is {max_scan}'.format(max_scan = maximum_value)
+print(message)
+
 
