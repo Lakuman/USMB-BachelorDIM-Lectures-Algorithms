@@ -9,5 +9,5 @@ addons:
     organization: Lakuman-github
 # command to run tests
 script:
-  - pytest --cov .
+  - pytest --cov assignements/Session1/
   - sonar-scanner        
