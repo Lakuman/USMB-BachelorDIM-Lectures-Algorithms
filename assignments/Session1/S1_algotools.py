@@ -55,8 +55,6 @@ def average_above_zero(input_list):
     return float(average)
     
 
-
-
 def max_value(input_list):
 
     maxi_value = input_list[0]
