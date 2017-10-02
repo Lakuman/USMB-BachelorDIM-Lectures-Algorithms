@@ -55,6 +55,8 @@ def average_above_zero(input_list):
     return float(average)
     
 
+
+
 def max_value(input_list):
 
     maxi_value = input_list[0]
@@ -81,7 +83,71 @@ def remove_whitespace(myoldstring):
 
     mystring = myoldstring.replace(" ","")
     return mystring;
-   
+
+"""
+# SORTING SELECTIVE
+
+# MISSING QUESTIONS 
+
+# sort_selective function declaration
+# Function able to sort a list
+# @param list_in : the list to be sorted
+def sort_selective(list_in):
+
+    for i in xrange(len(list_in) -1):
+        minIndex = i
+        for j in xrange(i, len(list_in)):
+            if list_in[j] < list_in[minIndex]:
+                minIndex = j
+
+        if minIndex != i:
+            tempValue = list_in[i]
+            list_in[i] = list_in[minIndex]
+            list_in[minIndex] = tempValue
+
+    return list_in
+
+# Initialize variable
+myList = [10, 15, 7, 1, 3, 3, 9]
+
+# Display message before method call
+print("List before sorting : " + str(myList))
+
+# Call sort_selective method and display message
+myList = sort_selective(myList)
+print("List after sorting : " + str(myList))
+
+
+
+# SORTING BUBBLE
+
+# MISSING QUESTIONS 
+
+# sort_bubble function declaration
+# Function able to sort a list
+# @param list_in : the list to be sorted
+def sort_bubble(list_in):
+    
+    permutations = True
+
+    while permutations == True:
+        permutations = False
+        for i in xrange(1, len(list_in)):
+            if list_in[i-1] > list_in[i]:
+                tempValue = list_in[i]
+                list_in[i] = list_in[i-1]
+                list_in[i-1] = tempValue
+                permutations = True
+
+    return list_in
+
+# Display message before method call
+print("list before sorting : " + str(myList))
+
+# Call sort_selective method and display messageb
+myList = sort_bubble(myList)
+print("list after sorting : " + str(myList))
+"""
     
     
 #the input list
@@ -100,6 +166,9 @@ print(message)
     
 mystring = 'Hello world'
 mynewsring = remove_whitespace(mystring)
+
+
+
 
 
     
