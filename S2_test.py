@@ -1,5 +1,4 @@
 import pytest
-import 
 def load_S1_script():
     """
         utility function that tris to load the script written along the first lesson
