@@ -21,7 +21,6 @@ def test_average_above_list():
     with pytest.raises(ZeroDivisionError):
         load_S1_script().average_above_zero(input_list)   
     
-    
 def test_max_value():
     input_list = [1,2,3,4]
     assert load_S1_script().max_value(input_list)== 4
