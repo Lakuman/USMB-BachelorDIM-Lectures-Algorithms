@@ -14,6 +14,7 @@ def load_S1_script():
 load_S1_script()
 
 input_list = [1,2,3,4]
+my_list = [10, 15, 7, 1, 3, 3, 9]
 mystring = "Hello world"
 
 def test_average_above_list():
@@ -27,3 +28,9 @@ def test_reverse_table():
     
 def test_remove_whitespace():
     assert load_S1_script().remove_whitespace(mystring)== "Helloworld"
+
+def test_sort_selective():
+    assert load_S1_script().sort_selective(my_list)== [1, 3, 3, 7, 9, 10, 15]
+
+def test_sort_bubble():
+    assert load_S1_script().sort_bubble(my_list)== [1, 3, 3, 7, 9, 10, 15]
