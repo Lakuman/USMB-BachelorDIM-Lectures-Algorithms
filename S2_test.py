@@ -14,6 +14,7 @@ def load_S1_script():
 load_S1_script()
 
 input_list = [1,2,3,4]
+mystring = "Hello world"
 
 def test_average_above_list():
     assert load_S1_script().average_above_zero(input_list)== 2.5 
@@ -25,4 +26,4 @@ def test_reverse_table():
     assert load_S1_script().reverse_table(input_list)== (4, 3, 2, 1)
     
 def test_remove_whitespace():
-    assert load_S1_script().remove_whitespace(input_list)== "Helloworld"
+    assert load_S1_script().remove_whitespace(mystring)== "Helloworld"
