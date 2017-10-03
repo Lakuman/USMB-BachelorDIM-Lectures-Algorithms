@@ -31,7 +31,7 @@ b=a+2
 mylist_sum=mylist + mylist2
 """
 
-
+import numpy as np
 
 def average_above_zero(input_list):
         
@@ -82,6 +82,40 @@ def remove_whitespace(myoldstring):
     mystring = myoldstring.replace(" ","")
     return mystring;
 
+def roi_bbox(input_image):
+    ##
+    # Function able to compute the bounding box coordinates of an object
+    # @param input_image: the input image to be scanned
+    
+    # Initialise variables 
+    # [xmin,ymin;xmax,ymin]
+    # [xmin,ymax;xmax,ymax]
+    #
+    size_rows=10
+    size_cols=10
+    xmin=size_cols
+    xmax=0
+    ymin=size_rows
+    ymax=0
+    
+    # Compute coordinates of the bounding box 
+    for row in range(0,size_rows):
+        for cols in range(0,size_cols):
+            if input_image[row,cols]>0:
+                if xmin>row:
+                    xmin=row
+                if xmax<row:
+                    xmax=row
+                if ymin>cols:
+                    ymin=cols
+                if ymax<cols:
+                    ymax=cols
+    
+    bounding_box_coordinates = np.array([[ymin,xmin],[ymax,xmin],[ymin,ymax],[ymax,xmax]])
+    return bounding_box_coordinates
+
+
+
 # SORTING SELECTIVE
 
 # MISSING QUESTIONS 
@@ -103,17 +137,6 @@ def sort_selective(list_in):
             list_in[minIndex] = tempValue
 
     return list_in
-
-# Initialize variable
-myList = [10, 15, 7, 1, 3, 3, 9]
-
-# Display message before method call
-print("List before sorting : " + str(myList))
-
-# Call sort_selective method and display message
-myList = sort_selective(myList)
-print("List after sorting : " + str(myList))
-
 
 
 # SORTING BUBBLE
@@ -138,13 +161,6 @@ def sort_bubble(list_in):
 
     return list_in
 
-# Display message before method call
-print("list before sorting : " + str(myList))
-
-# Call sort_selective method and display messageb
-myList = sort_bubble(myList)
-print("list after sorting : " + str(myList))
-
     
     
 #the input list
@@ -164,7 +180,33 @@ print(message)
 mystring = 'Hello world'
 mynewsring = remove_whitespace(mystring)
 
+# Initialise matrice and testing bbox function
 
+size_rows=10
+size_cols=10
+myMat=np.zeros([size_rows, size_cols], dtype=int)
+myMat[2:4,5:9]=np.ones([2,4])
+coordinates_bbox=roi_bbox(myMat)
+print(coordinates_bbox)
+print(myMat)
+
+
+# Initialize variable
+myList = [10, 15, 7, 1, 3, 3, 9]
+
+# Display message before method call
+print("List before sorting : " + str(myList))
+
+# Call sort_selective method and display message
+myList = sort_selective(myList)
+print("List after sorting : " + str(myList))
+
+# Display message before method call
+print("list before sorting : " + str(myList))
+
+# Call sort_selective method and display messageb
+myList = sort_bubble(myList)
+print("list after sorting : " + str(myList))
 
 
 
