@@ -32,6 +32,7 @@ mylist_sum=mylist + mylist2
 """
 
 
+
 def average_above_zero(input_list):
         
     #init critical variable
@@ -75,13 +76,11 @@ def reverse_table(input_list):
     
     return input_list
 
-
 #Removing Whitespace
 def remove_whitespace(myoldstring):
 
     mystring = myoldstring.replace(" ","")
     return mystring;
-
 
 # SORTING SELECTIVE
 
