@@ -25,4 +25,4 @@ def test_reverse_table():
     assert load_S1_script().reverse_table(input_list)== (4, 3, 2, 1)
     
 def test_remove_whitespace():
-    assert load_S1_script().reverse_table(input_list)== "helloworld"
+    assert load_S1_script().remove_whitespace(input_list)== "Helloworld"
