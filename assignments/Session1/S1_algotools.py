@@ -82,7 +82,7 @@ def remove_whitespace(myoldstring):
     mystring = myoldstring.replace(" ","")
     return mystring;
 
-"""
+
 # SORTING SELECTIVE
 
 # MISSING QUESTIONS 
@@ -145,7 +145,7 @@ print("list before sorting : " + str(myList))
 # Call sort_selective method and display messageb
 myList = sort_bubble(myList)
 print("list after sorting : " + str(myList))
-"""
+
     
     
 #the input list
