@@ -23,7 +23,10 @@ def test_average_above_list():
     
 def test_max_value():
     input_list = [1,2,3,4]
-    assert load_S1_script().max_value(input_list)== (4, 3) 
+    assert load_S1_script().max_value(input_list)== (4, 3)
+
+    input_list = [-1,-2,-3,-4]
+    assert load_S1_script().max_value(input_list)== (-1, 0)
 
 def test_reverse_table():
     input_list = [1,2,3,4]
