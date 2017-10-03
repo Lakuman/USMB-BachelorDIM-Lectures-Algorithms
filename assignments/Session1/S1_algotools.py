@@ -63,7 +63,7 @@ def max_value(input_list):
         if maxi_value < item:
             maxi_value = item
             maxi_idx = idx              
-    return maxi_value, maxi_idx
+    return maxi_value
 
 def reverse_table(input_list):
     lastidx = len(input_list)
