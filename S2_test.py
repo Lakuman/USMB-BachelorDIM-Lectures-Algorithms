@@ -20,3 +20,6 @@ def test_average_above_list():
     
 def test_max_value():
     assert load_S1_script().max_value(input_list)== (4, 3) 
+
+def test_reverse_table()
+    assert load_S1_script().reverse_table(input_list)== (4, 3, 2, 1) 
