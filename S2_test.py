@@ -41,6 +41,9 @@ def test_sort_selective():
     my_list = [10, 15, 7, 1, 3, 3, 9]
     assert load_S1_script().sort_selective(my_list)== [1, 3, 3, 7, 9, 10, 15]
 
+    my_list = [-10, -15, -7, -1, -3, -3, -9]
+    assert load_S1_script().sort_selective(my_list)== [-15, -10, -9, 7, -3, -3, -1]
+
 def test_sort_bubble():
     my_list = [10, 15, 7, 1, 3, 3, 9]
     assert load_S1_script().sort_bubble(my_list)== [1, 3, 3, 7, 9, 10, 15]
