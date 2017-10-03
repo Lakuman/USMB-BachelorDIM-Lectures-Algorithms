@@ -1,4 +1,6 @@
 import pytest
+import numpy as np
+
 def load_S1_script():
     """
         utility function that tris to load the script written along the first lesson
@@ -31,6 +33,9 @@ def test_max_value():
 def test_reverse_table():
     input_list = [1,2,3,4]
     assert load_S1_script().reverse_table(input_list)== [4, 3, 2, 1]
+
+"""def test_roi_bbox():"""
+    
     
 def test_remove_whitespace():
     mystring = "Hello world"
